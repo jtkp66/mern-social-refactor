@@ -61,8 +61,7 @@ router.post(
 
       const payload = {
         user: {
-          id: user.id, // mongoose abstraction from mongo's _id.
-          name: user.name
+          id: user.id // mongoose abstraction from mongo's _id.
         }
       };
 
