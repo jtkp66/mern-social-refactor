@@ -5,6 +5,7 @@
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
+  --secondary-color: #0d02a5;
 }
 
 * {
@@ -22,7 +23,7 @@ body {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--danger-color);
   text-decoration: none;
 }
 
@@ -68,6 +69,10 @@ img {
 
 .text-primary {
   color: var(--primary-color);
+}
+
+.text-danger {
+  color: var(--danger-color);
 }
 
 .text-dark {
@@ -205,6 +210,14 @@ img {
   border: #ccc solid 1px;
 }
 
+.btn-secondary,
+.bg-secondary,
+.badge-secondary,
+.alert-secondary {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
 .btn:hover {
   opacity: 0.8;
 }
@@ -308,7 +321,7 @@ button {
   z-index: 1;
   width: 100%;
   top: 0;
-  border-bottom: solid 1px var(--primary-color);
+  border-bottom: solid 1px var(--danger-color);
   opacity: 0.9;
 }
 
