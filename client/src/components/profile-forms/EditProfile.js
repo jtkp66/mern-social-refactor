@@ -45,7 +45,7 @@ const EditProfile = ({
       youtube: loading || !profile.social ? "" : profile.social.youtube,
       instagram: loading || !profile.social ? "" : profile.social.instagram
     });
-  }, [loading]);
+  }, [loading, getCurrentProfile]);
 
   const {
     company,
@@ -72,7 +72,7 @@ const EditProfile = ({
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Student MPR</h1>
+      <h1 className="large text-primary">Create Your Profile</h1>
       <p className="lead">
         <i className="fas fa-user" /> Let's get some information to make your
         profile stand out
@@ -165,7 +165,6 @@ const EditProfile = ({
           />
           <small className="form-text">Tell us a little about yourself</small>
         </div>
-
         <div className="my-2">
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
@@ -176,7 +175,6 @@ const EditProfile = ({
           </button>
           <span>Optional</span>
         </div>
-
         {displaySocialInputs && (
           <Fragment>
             <div className="form-group social-input">
@@ -189,7 +187,6 @@ const EditProfile = ({
                 onChange={e => onChange(e)}
               />
             </div>
-
             <div className="form-group social-input">
               <i className="fab fa-facebook fa-2x" />
               <input
@@ -200,7 +197,6 @@ const EditProfile = ({
                 onChange={e => onChange(e)}
               />
             </div>
-
             <div className="form-group social-input">
               <i className="fab fa-youtube fa-2x" />
               <input
@@ -211,7 +207,6 @@ const EditProfile = ({
                 onChange={e => onChange(e)}
               />
             </div>
-
             <div className="form-group social-input">
               <i className="fab fa-linkedin fa-2x" />
               <input
@@ -222,7 +217,6 @@ const EditProfile = ({
                 onChange={e => onChange(e)}
               />
             </div>
-
             <div className="form-group social-input">
               <i className="fab fa-instagram fa-2x" />
               <input
@@ -243,17 +237,14 @@ const EditProfile = ({
     </Fragment>
   );
 };
-
 EditProfile.propTypes = {
   createProfile: PropTypes.func.isRequired,
   getCurrentProfile: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired
 };
-
 const mapStateToProps = state => ({
   profile: state.profile
 });
-
 export default connect(
   mapStateToProps,
   { createProfile, getCurrentProfile }
