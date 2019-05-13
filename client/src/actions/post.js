@@ -62,11 +62,11 @@ export const removeLike = postId => async dispatch => {
 // delete posts
 export const deletePost = postId => async dispatch => {
   try {
-    const res = await axios.delete(`/api/posts/${postId}`);
+    await axios.delete(`/api/posts/${postId}`);
 
     dispatch({
       type: DELETE_POST,
-      payload: res.data
+      payload: postId
     });
 
     dispatch(setAlert("Post Removed", "success"));
