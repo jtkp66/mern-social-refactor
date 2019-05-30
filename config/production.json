@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://jtkp66:1rivendell@cluster0-pjcr2.mongodb.net/test?retryWrites=true",
+  "jwtSecret": "JJIYFYUFHKIYGIYGIYiugIUGIYGygygigiyFDSEseserrdyrdfjkhkbkyffh",
+  "githubClientId": "ec2a579e528b5171e813",
+  "githubSecret": "2fb8c25546f957604c8053310cd3ff778bb28fcf"
+}
